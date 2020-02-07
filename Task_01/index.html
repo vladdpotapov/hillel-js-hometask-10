@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Task #10: Part #01 (Practice)</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <section class="registration">
+        <div class="container">
+            <form class="form" name="mainForm">
+                <p class="mainForm__text">
+                    Your first name:
+                </p>
+                <input type="text" name="first-name" placeholder="Enter your first name">
+
+                <p class="mainForm__text">
+                    Your second name:
+                </p>
+                <input type="text" name="second-name" placeholder="Enter your second name">
+
+                <p class="mainForm__text">
+                    Your birthday:
+                </p>
+                <input type="date" name="birthday" placeholder="Enter your birthday date">
+
+                <p class="mainForm__text">
+                    Your gender:
+                </p>
+                <input type="radio" name="gender" value="M">Male
+                <input type="radio" name="gender" value="F">Female
+
+                <p class="mainForm__text">
+                    Your city:
+                </p>
+                <select name="city">
+                    <option value="0">Odessa</option>
+                    <option value="1">New-York</option>
+                    <option value="2">London</option>
+                    <option value="3">Paris</option>
+                    <option value="4">Milan</option>
+                </select>
+
+                <p class="mainForm__text">
+                    Your address:
+                </p>
+                <textarea name="address" cols="30" rows="5" placeholder="Enter your address"></textarea>
+
+                <p class="mainForm__text">
+                    Your languages:
+                </p>
+                <input type="checkbox" name="languages" value="ukr">Ukrainian <br>
+                <input type="checkbox" name="languages" value="ru">Russian    <br>  
+                <input type="checkbox" name="languages" value="en">English    <br>  
+                <input type="checkbox" name="languages" value="fr">French     <br>
+                
+                <input type="button" name="save" value="Save Data" class="button">
+            </form>
+        </div>
+    </section>
+    <script src="js/main.js"></script>
+</body>
+</html>
