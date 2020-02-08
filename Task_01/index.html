@@ -9,22 +9,22 @@
 </head>
 <body>
     <section class="registration">
-        <div class="container">
+        <div class="container" id="form__container">
             <form class="form" name="mainForm">
                 <p class="mainForm__text">
                     Your first name:
                 </p>
-                <input type="text" name="first-name" placeholder="Enter your first name">
+                <input type="text" name="firstName" placeholder="Enter your first name" id="fName">
 
                 <p class="mainForm__text">
                     Your second name:
                 </p>
-                <input type="text" name="second-name" placeholder="Enter your second name">
+                <input type="text" name="secondName" placeholder="Enter your second name" id="sName">
 
                 <p class="mainForm__text">
                     Your birthday:
                 </p>
-                <input type="date" name="birthday" placeholder="Enter your birthday date">
+                <input type="date" name="birthday" placeholder="Enter your birthday date" id="bDay">
 
                 <p class="mainForm__text">
                     Your gender:
@@ -46,7 +46,7 @@
                 <p class="mainForm__text">
                     Your address:
                 </p>
-                <textarea name="address" cols="30" rows="5" placeholder="Enter your address"></textarea>
+                <textarea name="address" cols="30" rows="5" placeholder="Enter your address" id="addr"></textarea>
 
                 <p class="mainForm__text">
                     Your languages:
@@ -56,10 +56,14 @@
                 <input type="checkbox" name="languages" value="en">English    <br>  
                 <input type="checkbox" name="languages" value="fr">French     <br>
                 
-                <input type="button" name="save" value="Save Data" class="button">
+                <input type="button" name="saveButton" value="Save Data" class="button">
             </form>
         </div>
     </section>
+    <script src="js/functions.js"></script>
+    <script src="js/Gender.js"></script>
+    <script src="js/Languages.js"></script>
+    <script src="js/User.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
