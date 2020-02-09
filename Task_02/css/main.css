@@ -1,6 +1,7 @@
 /* GENERAL */
 body {
     background-color: #585858;
+    font-family: sans-serif;
 }
 
 * {
@@ -11,15 +12,14 @@ body {
     max-width: 1024px;
     margin: 0 auto;
     padding: 0 10px;
-    border: 1px solid #ffffff;
     display: flex;
 }
 
 /* CATEGORIES */
 .categories {
     width: 25%;
-    border: 1px solid #ffffff;
     text-align: center;
+    border-right: 1px solid #ffffff;
 }
 
 .categories__item {
@@ -35,7 +35,7 @@ body {
 /* GOODS */
 .goods {
     width: 45%;
-    border: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
 }
 
 .goodsItem {
@@ -53,5 +53,37 @@ body {
 /* DATA */
 .data {
    width: 30%;
-   border: 1px solid #ffffff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.goodsDescription {
+    max-width: 500px;
+    text-align: center;
+    color: #ffffff;
+    line-height: 20px;
+}
+
+#form-button {
+    margin-top: 25px;
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff9900;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#form-button:hover {
+    background-color: #ffee00;
+}
+
+.form__container {
+    display: none;
+}
+
+.display--block {
+    display: block;
 }

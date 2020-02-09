@@ -21,8 +21,59 @@
 
             </div>
             <div class="data">
-
+                
             </div>
+        </div>
+
+        <div class="form__container" id="form__container">
+            <form class="form" name="mainForm">
+                <p class="mainForm__text">
+                    Your first name:
+                </p>
+                <input type="text" name="firstName" placeholder="Enter your first name" id="fName">
+
+                <p class="mainForm__text">
+                    Your second name:
+                </p>
+                <input type="text" name="secondName" placeholder="Enter your second name" id="sName">
+
+                <p class="mainForm__text">
+                    Your birthday:
+                </p>
+                <input type="date" name="birthday" placeholder="Enter your birthday date" id="bDay">
+
+                <p class="mainForm__text">
+                    Your gender:
+                </p>
+                <input type="radio" name="gender" value="M">Male
+                <input type="radio" name="gender" value="F">Female
+
+                <p class="mainForm__text">
+                    Your city:
+                </p>
+                <select name="city">
+                    <option value="0">Odessa</option>
+                    <option value="1">New-York</option>
+                    <option value="2">London</option>
+                    <option value="3">Paris</option>
+                    <option value="4">Milan</option>
+                </select>
+
+                <p class="mainForm__text">
+                    Your address:
+                </p>
+                <textarea name="address" cols="30" rows="5" placeholder="Enter your address" id="addr"></textarea>
+
+                <p class="mainForm__text">
+                    Your languages:
+                </p>
+                <input type="checkbox" name="languages" value="ukr">Ukrainian <br>
+                <input type="checkbox" name="languages" value="ru">Russian    <br>  
+                <input type="checkbox" name="languages" value="en">English    <br>  
+                <input type="checkbox" name="languages" value="fr">French     <br>
+                
+                <input type="button" name="saveButton" value="Save Data" class="button">
+            </form>
         </div>
     </section>
     <script src="js/variables.js"></script>

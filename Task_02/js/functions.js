@@ -13,14 +13,16 @@ function addGoodsDescription (object) {
     goodsDescription = document.createElement('div');
     goodsDescription.setAttribute('class', 'goodsDescription');
     goodsDescription.innerHTML = `<div>Price: ${object.price} <br /> Desc: ${object.desc}</div>`;
+
     formButton = document.createElement('button');
-    formButton.id = 'form-button'
-    formButton.innerText = 'Checkout'
-    formButton.onclick = () => addGoodsDescription2()
-    goodsDescription.append(formButton)
+    formButton.id = 'form-button';
+    formButton.innerText = 'Buy';
+    formButton.onclick = () => addForm();
+
+    goodsDescription.append(formButton);
     dataBox.append(goodsDescription);
-  }
+}
   
-function addGoodsDescription2 (object) {
-    formButton.remove()
+function addForm() {
+    dataForm.classList.add('display--block');
 }
