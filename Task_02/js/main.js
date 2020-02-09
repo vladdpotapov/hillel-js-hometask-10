@@ -1,5 +1,7 @@
 categoriesList.addEventListener('mousedown', function() {
     goodsBox.textContent = '';
+    dataBox.textContent = '';
+    dataForm.classList.remove('display--block');
 });
 
 categoriesList.addEventListener('mouseup', function (event) {

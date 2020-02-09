@@ -21,6 +21,8 @@ function addGoodsDescription (object) {
 
     goodsDescription.append(formButton);
     dataBox.append(goodsDescription);
+
+    dataForm.classList.remove('display--block');
 }
   
 function addForm() {
