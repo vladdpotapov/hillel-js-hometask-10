@@ -25,25 +25,19 @@ saveButton.addEventListener('click', function() {
         const userCity = form.elements.city.options[form.elements.city.selectedIndex].text;
         User.City = userCity;
 
-        // const userLanguages = getUserLanguages();
-        // User.Languages = userLanguages;
         let languages = form.elements.languages;
         let checkedLanguages = getCheckedItemsFromCheckboxes(languages);
+        const languagesString = [];
         for (let i = 0; i < checkedLanguages.length; i++) {
-            User.Languages = languagesMatches[checkedLanguages[i]];
-            console.log(User.Languages);
+            languagesString.push(languagesMatches[checkedLanguages[i]]);
         }
 
-        if (!inputFirstName.value){
+        User.Languages = languagesString.join(', ');
+
+        if (!inputFirstName.value || !inputSecondName.value || !inputBirthday.value || !inputAddress.value){
             inputFirstName.style.border = '1px solid red';
-            return false;
-        } else if (!inputSecondName.value){
             inputSecondName.style.border = '1px solid red';
-            return false;
-        } else if (!inputBirthday.value){
             inputBirthday.style.border = '1px solid red';
-            return false;
-        } else if (!inputAddress.value){
             inputAddress.style.border = '1px solid red';
             return false;
         }
@@ -56,14 +50,4 @@ saveButton.addEventListener('click', function() {
         box.innerHTML = showData(User);
 });
 
-// saveButton.addEventListener('click', function() {
-//     form.remove();
-
-//     let formContainer = document.getElementById('form__container');
-//     let box = document.createElement('div');
-//     box.setAttribute('class', 'dataResultBox'); 
-//     formContainer.prepend(box);  
-//     box.innerHTML = showData(User);
-
-// });
 

@@ -14,15 +14,6 @@ function getUserGender() {
     return gender;
 }
 
-// function getUserLanguages() {
-//     let languages = form.elements.languages;
-//     let checkedLanguages = getCheckedItemsFromCheckboxes(languages);
-//     for (let i = 0; i < checkedLanguages.length; i++) {
-//         langs = languagesMatches[checkedLanguages[i]];
-//         console.log(langs);
-//     }
-// }
-
 function showData(obj) {
     let result = '';
     for (let key in obj) {
@@ -33,9 +24,3 @@ function showData(obj) {
     return result;
 }
 
-// function validate(userInputId) {
-//     if (!userInputId.value) {
-//         userInputId.style.border = '1px solid red';
-//         return false;
-//     }
-// }

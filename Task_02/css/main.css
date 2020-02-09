@@ -1,0 +1,57 @@
+/* GENERAL */
+body {
+    background-color: #585858;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 10px;
+    border: 1px solid #ffffff;
+    display: flex;
+}
+
+/* CATEGORIES */
+.categories {
+    width: 25%;
+    border: 1px solid #ffffff;
+    text-align: center;
+}
+
+.categories__item {
+    cursor: pointer;
+    padding: 5px 0;
+    color: #ffffff;
+}
+
+.categories__item:hover {
+    background-color: #1f1f1f;
+}
+
+/* GOODS */
+.goods {
+    width: 45%;
+    border: 1px solid #ffffff;
+}
+
+.goodsItem {
+    padding: 5px 10px;
+    text-align: center;
+    color: #ff9100;
+    cursor: pointer;
+    transition: 0.1s ease;
+}
+
+.goodsItem:hover {
+    background-color: #1f1f1f;
+}
+
+/* DATA */
+.data {
+   width: 30%;
+   border: 1px solid #ffffff;
+}
