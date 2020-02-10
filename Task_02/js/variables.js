@@ -28,9 +28,5 @@ const goodsBox = document.querySelector('.goods');
 const dataBox = document.querySelector('.data');
 const dataForm = document.getElementById('form__container');
 
-// let currentCategory;
-// let currentProduct;
-// let goodsItem;
-// let goodsDescription;
 let formButton;
 let formContainer;

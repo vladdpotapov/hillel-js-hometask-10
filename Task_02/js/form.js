@@ -1,23 +1,11 @@
-const genderMatches = {
-    'M': 'Male',
-    'F': 'Female',
-};
-
-const languagesMatches = {
-    'ukr': 'Ukrainian',
-    'ru' : 'Russian',
-    'en' : 'English',
-    'fr' : 'French',
-};
-
 const User = {};
 
 const form   = document.querySelector('form[name="mainForm"]');
 
 const inputFirstName = document.getElementById('fName');
 const inputSecondName = document.getElementById('sName');
-const inputBirthday = document.getElementById('bDay');
 const inputAddress = document.getElementById('addr');
+const inputQuantity = document.getElementById('quantity');
 
 const saveButton = document.querySelector('input[name="saveButton"]');
 saveButton.addEventListener('click', function() {
@@ -27,32 +15,26 @@ saveButton.addEventListener('click', function() {
         const userSecondName = form.elements.secondName.value;
         User.Surname = userSecondName;
 
-        const userBirthday = form.elements.birthday.value;
-        User.Birthday = userBirthday;
-
         const userAddress = form.elements.address.value;
         User.Address = userAddress;
 
-        const userGender = getUserGender();
-        User.Gender = userGender;
+        const userQuantity = form.elements.quantity.value;
+        User.Quantity = userQuantity;
 
         const userCity = form.elements.city.options[form.elements.city.selectedIndex].text;
         User.City = userCity;
 
-        let languages = form.elements.languages;
-        let checkedLanguages = getCheckedItemsFromCheckboxes(languages);
-        const languagesString = [];
-        for (let i = 0; i < checkedLanguages.length; i++) {
-            languagesString.push(languagesMatches[checkedLanguages[i]]);
-        }
+        const userPost = form.elements.post.options[form.elements.post.selectedIndex].text;
+        User.Post = userPost;
 
-        User.Languages = languagesString.join(', ');
+        const userComment = form.elements.comment.value;
+        User.Comment = userComment;
 
-        if (!inputFirstName.value || !inputSecondName.value || !inputBirthday.value || !inputAddress.value){
+        if (!inputFirstName.value || !inputSecondName.value || !inputAddress.value || !inputQuantity) {
             inputFirstName.style.border = '1px solid red';
             inputSecondName.style.border = '1px solid red';
-            inputBirthday.style.border = '1px solid red';
             inputAddress.style.border = '1px solid red';
+            inputQuantity.style.border = '1px solid red';
             return false;
         }
 
@@ -63,22 +45,6 @@ saveButton.addEventListener('click', function() {
         formContainer.prepend(box);  
         box.innerHTML = showData(User);
 });
-
-function getCheckedItemsFromCheckboxes(list) {
-    let checkedItems = [];
-    for (let i = 0; i < list.length; i++) {
-        if (list[i].checked) {
-            checkedItems.push(list[i].value);
-        }
-    }
-    return checkedItems;
-}
-
-function getUserGender() {
-    let checkedGender = form.elements.gender.value;
-    let gender = genderMatches[checkedGender];
-    return gender;
-}
 
 function showData(obj) {
     let result = '';

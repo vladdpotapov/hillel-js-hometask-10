@@ -28,50 +28,52 @@
         <div class="form__container" id="form__container">
             <form class="form" name="mainForm">
                 <p class="mainForm__text">
-                    Your first name:
+                    * Your first name:
                     <input type="text" name="firstName" placeholder="Enter your first name" id="fName">
                 </p>
                 
                 <p class="mainForm__text">
-                    Your second name:
+                    * Your second name:
                 <input type="text" name="secondName" placeholder="Enter your second name" id="sName">
                 </p>
 
                 <p class="mainForm__text">
-                    Your birthday:
-                <input type="date" name="birthday" placeholder="Enter your birthday date" id="bDay">
+                    * Your city:
                 </p>
-
-                <p class="mainForm__text">
-                    Your gender:
-                </p>
-                <input type="radio" name="gender" value="M">Male
-                <input type="radio" name="gender" value="F">Female
-
-                <p class="mainForm__text">
-                    Your city:
-                </p>
-                <select name="city">
+                <select name="city" id="city">
                     <option value="0">Odessa</option>
                     <option value="1">New-York</option>
-                    <option value="2">London</option>
-                    <option value="3">Paris</option>
-                    <option value="4">Milan</option>
+                    <option value="2">Paris</option>
+                    <option value="3">Milan</option>
+                    <option value="4">London</option>
+                </select>
+
+                <p class="mainForm__text">
+                    Post Department:
+                </p>
+                <select name="post" id="post">
+                    <option value="0">Department #01</option>
+                    <option value="1">Department #02</option>
+                    <option value="2">Department #03</option>
+                    <option value="3">Department #04</option>
+                    <option value="4">Department #05</option>
                 </select>
                 
                 <p class="mainForm__text">
-                    Your address:
+                    * Your address:
                 </p>
                 <textarea name="address" cols="30" rows="5" placeholder="Enter your address" id="addr"></textarea>
 
                 <p class="mainForm__text">
-                    Your languages:
+                    * Your comment:
                 </p>
-                <input type="checkbox" name="languages" value="ukr">Ukrainian <br>
-                <input type="checkbox" name="languages" value="ru">Russian    <br>  
-                <input type="checkbox" name="languages" value="en">English    <br>  
-                <input type="checkbox" name="languages" value="fr">French     <br>
-                
+                <textarea name="comment" cols="30" rows="5" placeholder="Enter your comment" id="comment"></textarea>
+
+                <p class="mainForm__text">
+                    * Quantity of the peoduct:
+                <input type="text" name="quantity" placeholder="Enter quantity of the product" id="quantity">
+                </p>
+
                 <input type="button" name="saveButton" value="Save Data" class="button">
             </form>
         </div>
