@@ -1,3 +1,17 @@
+const genderMatches = {
+    'M': 'Male',
+    'F': 'Female',
+};
+
+const languagesMatches = {
+    'ukr': 'Ukrainian',
+    'ru' : 'Russian',
+    'en' : 'English',
+    'fr' : 'French',
+};
+
+const User = {};
+
 const form   = document.querySelector('form[name="mainForm"]');
 
 const inputFirstName = document.getElementById('fName');
