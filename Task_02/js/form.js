@@ -1,3 +1,8 @@
+const paymentMatches = {
+    'C': 'Cash',
+    'CC': 'Credit Card',
+};
+
 const User = {};
 
 const form   = document.querySelector('form[name="mainForm"]');
@@ -24,6 +29,9 @@ saveButton.addEventListener('click', function() {
         const userCity = form.elements.city.options[form.elements.city.selectedIndex].text;
         User.City = userCity;
 
+        const userPayment = getUserPayment();
+        User.Payment = userPayment;
+
         const userPost = form.elements.post.options[form.elements.post.selectedIndex].text;
         User.Post = userPost;
 
@@ -46,6 +54,11 @@ saveButton.addEventListener('click', function() {
         box.innerHTML = showData(User);
 });
 
+function getUserPayment() {
+    let checkedPayment = form.elements.payment.value;
+    let payment = paymentMatches[checkedPayment];
+    return payment;
+}
 function showData(obj) {
     let result = '';
     for (let key in obj) {
